@@ -1,0 +1,13 @@
+{
+	"BitFullSearch":{
+		"scope": "python",
+		"prefix": "bit",
+		"body": [
+			"bit_len = n",
+			"for i in range(2**bit_len):",
+			"    for j in range(bit_len):",
+			"        if (i>>j &1):",
+		],
+		"description": "bit全探索のスニペット"
+	},
+}

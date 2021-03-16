@@ -50,10 +50,10 @@ def oj_download(problem_url,file_path,workspace_path,problem_id):
 
 def oj_test(problem_dir,file_path,run_language):
     if run_language=='python3':
-        cp = subprocess.run(['oj','t','-c','python3 {}'.format(file_path),'-d',problem_dir,'-D','--print-memory'])
+        cp = subprocess.run(['oj','t','-c','python3 {}'.format(file_path),'-d',problem_dir,'-D','--print-memory',"--gnu-time","/usr/bin/time"])
        
     elif run_language=='pypy3':
-        cp = subprocess.run(['oj','t','-c','pypy3 {}'.format(file_path),'-d',problem_dir,'-D','--print-memory'])
+        cp = subprocess.run(['oj','t','-c','pypy3 {}'.format(file_path),'-d',problem_dir,'-D','--print-memory',"--gnu-time","/usr/bin/time"])
         
     elif run_language=='cpp':
         cp = subprocess.run(['g++',sys.argv[1],'-o','./a.out'])

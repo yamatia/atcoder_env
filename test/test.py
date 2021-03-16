@@ -81,7 +81,7 @@ def main():
         else:
             ans = min(ans,tmp)
     
-    return print(ans,1)
+    return print(ans)
 
 if __name__=='__main__':
     main()
