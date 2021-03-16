@@ -1,0 +1,91 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "oj_download & test:python3",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "${workspaceFolder}/scripts/oj.py",
+                "${file}",
+                "${workspaceFolder}",
+                "test",
+                "python3"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+        },
+        {
+            "label": "oj_download & test:pypy3",
+            "type": "shell",
+            "command": "pypy3",
+            "args": [
+                "${workspaceFolder}/scripts/oj.py",
+                "${file}",
+                "${workspaceFolder}",
+                "test",
+                "pypy3"
+            ],
+            "problemMatcher": [],
+        },
+        {
+            "label": "oj_submit:python3",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "${workspaceFolder}/scripts/oj.py",
+                "${file}",
+                "${workspaceFolder}",
+                "submit",
+                "python3"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "oj_submit:pypy3",
+            "type": "shell",
+            "command": "pypy3",
+            "args": [
+                "${workspaceFolder}/scripts/oj.py",
+                "${file}",
+                "${workspaceFolder}",
+                "submit",
+                "pypy3"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "run cpp",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "${file}",
+                "-o",
+                "${workspaceFolder}/tmp/a.out",
+                "-lm",
+                "-lstdc++",
+                "-g",
+                "&&",
+                "${workspaceFolder}/tmp/a.out",
+                "&&",
+                "rm",
+                "-f",
+                "${workspaceFolder}/tmp/a.out",
+            ],
+            "problemMatcher": []
+        },
+    ],
+    "inputs":[
+        {
+            "id":"filename",
+            "description":"ファイルの名前を入力してください",
+            "default":"test",
+            "type":"promptString",
+        }
+    ]
+}

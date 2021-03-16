@@ -1,0 +1,185 @@
+{
+	"def main()":{
+		"scope": "python",
+		"prefix": "template",
+		"body": [
+			"#template",
+			"import sys",
+			"# sys.setrecursionlimit(10**9)",
+			"",
+			"read = sys.stdin.read",
+			"readline = sys.stdin.readline",
+			"readlines = sys.stdin.readlines",
+			"",
+			"read_int = lambda: int(readline())",
+			"read_ints = lambda: map(int,readline().split())",
+			"read_str = lambda: readline().rstrip()",
+			"read_strs = lambda: readline().rstrip().split()",
+			"read_ints_list = lambda: list(map(int,readline().split()))",
+			"read_ints_grid = lambda h:list(list(map(int,readline().split())) for _ in range(h))",
+			"read_strs_list = lambda: list(map(str,list(readline().rstrip())))",
+			"read_strs_grid = lambda h:list(list(readline().rstrip()) for _ in range(h))",
+			"",
+			"def read_allints_grid(w):",
+			"    grid = map(int,read().split())",
+			"    grid = list(map(list,zip(*(grid for _ in range(w)))))",
+			"    return grid",
+			"",
+			"def read_allstrs_grid(w):",
+			"    grid = map(str,read().split())",
+			"    grid = list(map(list,zip(*(grid for _ in range(w)))))",
+			"    return grid",
+			"",
+			"#import",
+			"# from copy import deepcopy",
+			"# from decimal import Decimal",
+			"# from math import ceil,floor",
+			"# from collections import deque,Counter",
+			"# from heapq import heapify,heappop,heappush",
+			"# from itertools import accumulate,product,permutations,combinations,combinations_with_replacement",
+			"# from bisect import bisect_left,bisect_right",
+			"# from functools import lru_cache#@lru_cache(maxsize=None)",
+			"",
+			"#solution",
+			"",
+			"def main():",
+			"",
+			"if __name__=='__main__':",
+			"    main()"
+		],
+		"description": "code template"
+	},
+	"template": {
+		"scope": "python",
+		"prefix": "template",
+		"body": [
+		  "\"\"\"",
+		  "URL:${0}",
+		  "DATE:$CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE",
+		  "\"\"\"",
+		  "import sys",
+		  "# sys.setrecursionlimit(10**9)",
+		  "# from copy import deepcopy",
+		  "# from decimal import Decimal",
+		  "# from math import ceil,floor",
+		  "# from collections import deque,Counter",
+		  "# from heapq import heapify,heappop,heappush",
+		  "# from itertools import accumulate,product,permutations,combinations,combinations_with_replacement",
+		  "# from bisect import bisect_left,bisect_right",
+		  "# from functools import lru_cache#@lru_cache(maxsize=None)",
+		  "",
+		  "read = sys.stdin.read",
+		  "readline = sys.stdin.readline",
+		  "readlines = sys.stdin.readlines",
+		  "",
+		  "read_int = lambda: int(readline())",
+		  "read_ints = lambda: map(int,readline().split())",
+		  "read_str = lambda: readline().rstrip()",
+		  "read_strs = lambda: readline().rstrip().split()",
+		  "read_ints_list = lambda: list(map(int,readline().split()))",
+		  "read_ints_array = lambda h:list(list(map(int,readline().split())) for _ in range(h))",
+		  "read_strs_list = lambda: list(map(str,list(readline().rstrip())))",
+		  "read_strs_array = lambda h:list(list(readline().rstrip()) for _ in range(h))",
+		  "",
+		  "# solve",
+		  "",
+		  "def main():",
+		  "",
+		  "    return 0",
+		  "if __name__=='__main__':",
+		  "    main()"
+		],
+		"description": ""
+	  },
+	"int(input())":{
+		"scope": "python",
+		"prefix": "int",
+		"body": "int(input())",
+		"description": "int(input())"
+	},
+	"for loop":{
+		"scope": "python",
+		"prefix": "for",
+		"body": "for ${1:i} in range(${2:n}):",
+		"description": "for loop"
+	},
+	"input nsequence":{
+		"scope": "python",
+		"prefix": "map",
+		"body": "map(int,input().split())",
+		"description": "input intmap"
+	},
+	"define grid":{
+		"scope": "python",
+		"prefix": "[][]",
+		"body":"[[${1:-1}]*w for i in range(h)]",
+		"description": "define 2Dgrid"
+	},
+	"import deque":{
+		"scope": "python",
+		"prefix": "from",
+		"body": "from collections import deque\n",
+		"description": "import deque"
+	},
+	"import Counter":{
+		"scope": "python",
+		"prefix": "from",
+		"body": "from collections import Counter\n",
+		"description": "import deque"
+	},
+	"import itertools":{
+		"scope": "python",
+		"prefix": "from",
+		"body": [
+			"from itertools import accumulate,product,permutations,combinations,combinations_with_replacement",
+			"'''",
+			"accumulate([1,2,3,4,5]) --> 1 3 6 10 15",
+			"product(range(2), repeat=3) --> 000 001 010 011 100 101 110 111",
+			"permutations(range(3)) --> 012 021 102 120 201 210",
+			"combinations('ABCD', 2) --> AB AC AD BC BD CD",
+			"combinations_with_replacement('ABC', 2) --> AA AB AC BB BC CC",
+			"'''\n",
+		],
+		"description": "import itertools"
+	},
+	"import bisect":{
+		"scope": "python",
+		"prefix": "from",
+		"body": [
+			"from bisect import bisect_left,bisect_right",
+			"'''",
+			"bisect_left(vec,key)-->key未満の数",
+			"bisect_right(vec,key)-->key以下の数",
+			"'''\n",
+		],
+		"description": "import itertools"
+	},
+	"release recursion limit":{
+		"scope": "python",
+		"prefix": "sys",
+		"body": "sys.setrecursionlimit(500**2)",
+		"description": "Release the recursion limit for python"
+	},
+	"graph template": {
+		"scope": "python",
+		"prefix": "G",
+		"body": [
+			"G = [[] for _ in range(${0:n})]",
+			"for i in range(${1:n}):",
+			"    a,b = map(int,input().split())",
+		  "    a,b = a-1,b-1",
+		  "    G[a].append(b)",
+		  "    G[b].append(a)"
+		],
+		"description": "graph template"
+	},
+	"month":{
+		"scope": "python",
+		"prefix": "month",
+		"body": [
+			"month_today = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]",
+			"month_acc = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]",
+		],
+		"description": "month to day"
+	},
+}
