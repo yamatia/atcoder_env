@@ -79,9 +79,11 @@ def main():
     run_language = sys.argv[4]
     
     problem_url = read_url(file_path)
-    problem_id = os.path.splitext(os.path.basename(problem_url))[0]
+    problem_id = os.path.basename(problem_url).split('/')[-1]
     
     print('RUN_type:',run_type)
+    print('PROBLEM_ID:',problem_id)
+    
     if run_type=='test':
         problem_dir = oj_download(problem_url,file_path,workspace_path,problem_id)
         oj_test(problem_dir,file_path,run_language)

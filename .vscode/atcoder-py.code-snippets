@@ -33,8 +33,8 @@
 		  "",
 		  "# solve",
 		  "",
-		  "def main():",
-		  "    ${2:n = int(input())}",
+		  "def main(${2}):",
+		  "    ",
 		  "    ",
 		  "    return 0",
 		  "",
@@ -112,6 +112,20 @@
 		  "    G[b].append(a)"
 		],
 		"description": "graph template"
+	},
+	"dxdy":{
+		"scope": "python",
+		"prefix": "dxdy",
+		"body": [
+			"dxdy = [(1,0),(-1,0),(0,-1),(0,1)]#(1,1),(-1,-1),(-1,1),(1,-1)",
+			"",
+			"for dx,dy in dxdy:",
+			"    nx = x + dx",
+			"    ny = y + dy",
+			"    if nx<0 or nx>=w or ny<0 or ny>=h:",
+			"        continue",
+		],
+		"description": "dxdy",
 	},
 	"month":{
 		"scope": "python",
